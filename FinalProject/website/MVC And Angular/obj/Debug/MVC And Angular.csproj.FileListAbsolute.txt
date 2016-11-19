@@ -286,3 +286,51 @@ C:\Users\assaf.peretz\Desktop\FinalProject\WebSite\MVC And Angular\obj\Debug\MVC
 C:\Users\assaf.peretz\Desktop\FinalProject\WebSite\MVC And Angular\obj\Debug\MVC And Angular.pdb
 C:\Users\shay.vilk\Desktop\FinalProject\WebSite\MVC And Angular\obj\Debug\MVC And Angular.csprojResolveAssemblyReference.cache
 C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\obj\Debug\MVC And Angular.csprojResolveAssemblyReference.cache
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\roslyn\csc.exe
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\roslyn\vbc.exe
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\roslyn\VBCSCompiler.exe
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\MVC And Angular.dll.config
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\MVC And Angular.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\MVC And Angular.pdb
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\Business Logic.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\Data Access Layer.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\EntityFramework.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\EntityFramework.SqlServer.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\Newtonsoft.Json.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Net.Http.Formatting.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Web.Helpers.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Web.Http.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Web.Http.WebHost.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Web.Mvc.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Web.Razor.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Web.WebPages.Deployment.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Web.WebPages.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Web.WebPages.Razor.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\Business Logic.pdb
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\Data Access Layer.pdb
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\EntityFramework.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\EntityFramework.SqlServer.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Web.Helpers.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Web.Mvc.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Web.Razor.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Web.WebPages.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Web.WebPages.Deployment.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Web.WebPages.Razor.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\Newtonsoft.Json.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Net.Http.Formatting.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Web.Http.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\bin\System.Web.Http.WebHost.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\obj\Debug\MVC And Angular.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\WebSite\MVC And Angular\obj\Debug\MVC And Angular.pdb

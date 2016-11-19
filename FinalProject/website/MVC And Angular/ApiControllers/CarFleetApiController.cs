@@ -15,7 +15,7 @@ namespace MVC_And_Angular.ApiControllers
             {
                 PeretzRentsEntities db = new PeretzRentsEntities();
 
-                db.AddCarToCarFleet(Car.CarID, Car.CarModelID, Car.Mileage, Car.Photo, Car.ReadyForRental);
+                db.AddCarToCarFleet(Car.CarID, Car.CarModelID, Car.Mileage, Car.Photo, Car.ReadyForRental, Car.IsDelete);
                 db.SaveChanges();
                 return Request.CreateResponse(HttpStatusCode.Created);
             }
