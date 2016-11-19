@@ -56,3 +56,13 @@ C:\Users\shay.vilk\Desktop\FinalProject\Data Access Layer\bin\Debug\EntityFramew
 C:\Users\shay.vilk\Desktop\FinalProject\Data Access Layer\obj\Debug\Data Access Layer.csprojResolveAssemblyReference.cache
 C:\Users\shay.vilk\Desktop\FinalProject\Data Access Layer\obj\Debug\Data Access Layer.dll
 C:\Users\shay.vilk\Desktop\FinalProject\Data Access Layer\obj\Debug\Data Access Layer.pdb
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\bin\Debug\Data Access Layer.dll.config
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\bin\Debug\Data Access Layer.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\bin\Debug\Data Access Layer.pdb
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\bin\Debug\EntityFramework.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\bin\Debug\EntityFramework.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\obj\Debug\Data Access Layer.csprojResolveAssemblyReference.cache
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\obj\Debug\Data Access Layer.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\obj\Debug\Data Access Layer.pdb

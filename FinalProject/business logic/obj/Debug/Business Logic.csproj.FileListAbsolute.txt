@@ -59,3 +59,4 @@ C:\Users\assaf.peretz\Desktop\FinalProject\Business Logic\obj\Debug\Business Log
 C:\Users\assaf.peretz\Desktop\FinalProject\Business Logic\obj\Debug\Business Logic.dll
 C:\Users\assaf.peretz\Desktop\FinalProject\Business Logic\obj\Debug\Business Logic.pdb
 C:\Users\shay.vilk\Desktop\FinalProject\Business Logic\obj\Debug\Business Logic.csprojResolveAssemblyReference.cache
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Business Logic\obj\Debug\Business Logic.csprojResolveAssemblyReference.cache

@@ -10,10 +10,13 @@
 namespace Data_Access_Layer
 {
     using System;
-    
+
     public partial class CheckAvailability_Result
     {
         public string CarID { get; set; }
+        public string CarModel { get; set; }
+        public string Transmission { get; set; }
+        public string ManufacturerName { get; set; }
         public int CarModelID { get; set; }
         public int Mileage { get; set; }
         public string Photo { get; set; }
