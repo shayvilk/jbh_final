@@ -1,0 +1,31 @@
+﻿<a href="#/home">Home</a> | <a href="#/products">Products</a> | <a href="#/suppliers">Suppliers</a>
+
+
+<hr />
+<h2>Car Order Page</h2>
+<!-- need to add ng-module for the CarOrderPage -->
+<br/>
+<input type="date" ng-model="StartDate" placeholder="Start date"/>
+<label>start date</label>
+<br/>
+<br />
+<input type="date" ng-model="FinishDate" placeholder="Finish Date"/>
+<label>Finish date</label>
+<br/>
+<input type="checkbox" ng-model="AutomaticTranzmition" placeholder="Automatic Tranzmition"/>
+<label>Manual Transmission ?</label>
+<br/>
+<input type="text" ng-model="CarMake" placeholder="Car Make"/>
+<br/>
+<input type="text" ng-model="CarModule" placeholder="Car Module" />
+
+<br/>
+<input type="text" ng-model="CarID" placeholder="Select your car"/>
+<br/>
+
+<input type="button" ng-click="addOrderCar" value="Order"/>
+
+
+
+<h2>Home Page</h2>
+

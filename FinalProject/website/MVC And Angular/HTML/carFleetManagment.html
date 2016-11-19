@@ -1,0 +1,43 @@
+﻿<a href="#/home">Home</a> | <a href="#/products">Products</a> | <a href="#/suppliers">Suppliers</a>
+
+
+<hr />
+<h2>Car Fleet Managment Page</h2>
+
+<h4>add New Car</h4>
+
+                DB.AddCarToCarFleet(CarID, CarModelID, Mileage, Photo, ReadyForRental);
+
+<br />
+<label>Car ID</label>
+<input type="text" ng-model="CarID" placeholder="car ID" />
+<br />
+
+<br />
+<label>Car Module ID</label>
+
+<input type="text" ng-model="CarModuleID" placeholder="Car Module ID" />
+
+<br />
+<label>Car Milage in KM</label>
+
+<input type="text" ng-model="Mileage" placeholder="Mileage" />
+<br />
+<label>Car Photo</label>
+
+<input type="text" ng-model="Photo" placeholder="Photo" />
+<br />
+<label>is the car reqady for rental</label>
+
+<input type="checkbox" ng-model="ReadyForRental" placeholder="ReadyForRental" />
+
+
+<br />
+<input type="button" value="Add Car" ng-click="addCarToFleet()" />
+<input type="button" value="Remove Car" ng-click="removeCarFromFleet()" />
+<input type="button" value="Find Car" ng-click="getCarFromFleet()" />
+
+
+
+<h2>Home Page</h2>
+

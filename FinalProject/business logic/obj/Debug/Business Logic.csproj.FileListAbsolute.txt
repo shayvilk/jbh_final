@@ -1,0 +1,61 @@
+C:\Users\assaf.peretz\Dropbox\קורס תכנות גון ברייס\Projects\FinalProject\Business Logic\bin\Debug\Business Logic.dll.config
+C:\Users\assaf.peretz\Dropbox\קורס תכנות גון ברייס\Projects\FinalProject\Business Logic\bin\Debug\Business Logic.dll
+C:\Users\assaf.peretz\Dropbox\קורס תכנות גון ברייס\Projects\FinalProject\Business Logic\bin\Debug\Business Logic.pdb
+C:\Users\assaf.peretz\Dropbox\קורס תכנות גון ברייס\Projects\FinalProject\Business Logic\bin\Debug\Data Access Layer.dll
+C:\Users\assaf.peretz\Dropbox\קורס תכנות גון ברייס\Projects\FinalProject\Business Logic\bin\Debug\EntityFramework.dll
+C:\Users\assaf.peretz\Dropbox\קורס תכנות גון ברייס\Projects\FinalProject\Business Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\assaf.peretz\Dropbox\קורס תכנות גון ברייס\Projects\FinalProject\Business Logic\bin\Debug\Data Access Layer.pdb
+C:\Users\assaf.peretz\Dropbox\קורס תכנות גון ברייס\Projects\FinalProject\Business Logic\bin\Debug\EntityFramework.xml
+C:\Users\assaf.peretz\Dropbox\קורס תכנות גון ברייס\Projects\FinalProject\Business Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\assaf.peretz\Dropbox\קורס תכנות גון ברייס\Projects\FinalProject\Business Logic\obj\Debug\Business Logic.csprojResolveAssemblyReference.cache
+C:\Users\assaf.peretz\Dropbox\קורס תכנות גון ברייס\Projects\FinalProject\Business Logic\obj\Debug\Business Logic.dll
+C:\Users\assaf.peretz\Dropbox\קורס תכנות גון ברייס\Projects\FinalProject\Business Logic\obj\Debug\Business Logic.pdb
+C:\Users\Shay.Vilk\Dropbox\finalproject_15082016\FinalProject\Business Logic\bin\Debug\Business Logic.dll.config
+C:\Users\Shay.Vilk\Dropbox\finalproject_15082016\FinalProject\Business Logic\bin\Debug\Business Logic.dll
+C:\Users\Shay.Vilk\Dropbox\finalproject_15082016\FinalProject\Business Logic\bin\Debug\Business Logic.pdb
+C:\Users\Shay.Vilk\Dropbox\finalproject_15082016\FinalProject\Business Logic\bin\Debug\Data Access Layer.dll
+C:\Users\Shay.Vilk\Dropbox\finalproject_15082016\FinalProject\Business Logic\bin\Debug\EntityFramework.dll
+C:\Users\Shay.Vilk\Dropbox\finalproject_15082016\FinalProject\Business Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Shay.Vilk\Dropbox\finalproject_15082016\FinalProject\Business Logic\bin\Debug\Data Access Layer.pdb
+C:\Users\Shay.Vilk\Dropbox\finalproject_15082016\FinalProject\Business Logic\bin\Debug\EntityFramework.xml
+C:\Users\Shay.Vilk\Dropbox\finalproject_15082016\FinalProject\Business Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Shay.Vilk\Dropbox\finalproject_15082016\FinalProject\Business Logic\obj\Debug\Business Logic.csprojResolveAssemblyReference.cache
+C:\Users\Shay.Vilk\Dropbox\finalproject_15082016\FinalProject\Business Logic\obj\Debug\Business Logic.dll
+C:\Users\Shay.Vilk\Dropbox\finalproject_15082016\FinalProject\Business Logic\obj\Debug\Business Logic.pdb
+C:\Users\assaf.peretz\Dropbox\Saves\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\Business Logic.dll.config
+C:\Users\assaf.peretz\Dropbox\Saves\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\Business Logic.dll
+C:\Users\assaf.peretz\Dropbox\Saves\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\Business Logic.pdb
+C:\Users\assaf.peretz\Dropbox\Saves\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\Data Access Layer.dll
+C:\Users\assaf.peretz\Dropbox\Saves\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\EntityFramework.dll
+C:\Users\assaf.peretz\Dropbox\Saves\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\assaf.peretz\Dropbox\Saves\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\Data Access Layer.pdb
+C:\Users\assaf.peretz\Dropbox\Saves\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\EntityFramework.xml
+C:\Users\assaf.peretz\Dropbox\Saves\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\assaf.peretz\Dropbox\Saves\FinalProject_15082016\FinalProject\Business Logic\obj\Debug\Business Logic.csprojResolveAssemblyReference.cache
+C:\Users\assaf.peretz\Dropbox\Saves\FinalProject_15082016\FinalProject\Business Logic\obj\Debug\Business Logic.dll
+C:\Users\assaf.peretz\Dropbox\Saves\FinalProject_15082016\FinalProject\Business Logic\obj\Debug\Business Logic.pdb
+C:\Users\Shay.Vilk\Desktop\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\Business Logic.dll.config
+C:\Users\Shay.Vilk\Desktop\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\Business Logic.dll
+C:\Users\Shay.Vilk\Desktop\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\Business Logic.pdb
+C:\Users\Shay.Vilk\Desktop\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\Data Access Layer.dll
+C:\Users\Shay.Vilk\Desktop\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\EntityFramework.dll
+C:\Users\Shay.Vilk\Desktop\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Shay.Vilk\Desktop\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\Data Access Layer.pdb
+C:\Users\Shay.Vilk\Desktop\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\EntityFramework.xml
+C:\Users\Shay.Vilk\Desktop\FinalProject_15082016\FinalProject\Business Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Shay.Vilk\Desktop\FinalProject_15082016\FinalProject\Business Logic\obj\Debug\Business Logic.csprojResolveAssemblyReference.cache
+C:\Users\Shay.Vilk\Desktop\FinalProject_15082016\FinalProject\Business Logic\obj\Debug\Business Logic.dll
+C:\Users\Shay.Vilk\Desktop\FinalProject_15082016\FinalProject\Business Logic\obj\Debug\Business Logic.pdb
+C:\Users\assaf.peretz\Desktop\FinalProject\Business Logic\bin\Debug\Business Logic.dll.config
+C:\Users\assaf.peretz\Desktop\FinalProject\Business Logic\bin\Debug\Business Logic.dll
+C:\Users\assaf.peretz\Desktop\FinalProject\Business Logic\bin\Debug\Business Logic.pdb
+C:\Users\assaf.peretz\Desktop\FinalProject\Business Logic\bin\Debug\Data Access Layer.dll
+C:\Users\assaf.peretz\Desktop\FinalProject\Business Logic\bin\Debug\EntityFramework.dll
+C:\Users\assaf.peretz\Desktop\FinalProject\Business Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\assaf.peretz\Desktop\FinalProject\Business Logic\bin\Debug\Data Access Layer.pdb
+C:\Users\assaf.peretz\Desktop\FinalProject\Business Logic\bin\Debug\EntityFramework.xml
+C:\Users\assaf.peretz\Desktop\FinalProject\Business Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\assaf.peretz\Desktop\FinalProject\Business Logic\obj\Debug\Business Logic.csprojResolveAssemblyReference.cache
+C:\Users\assaf.peretz\Desktop\FinalProject\Business Logic\obj\Debug\Business Logic.dll
+C:\Users\assaf.peretz\Desktop\FinalProject\Business Logic\obj\Debug\Business Logic.pdb
+C:\Users\shay.vilk\Desktop\FinalProject\Business Logic\obj\Debug\Business Logic.csprojResolveAssemblyReference.cache

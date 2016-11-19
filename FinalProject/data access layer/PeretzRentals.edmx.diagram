@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="94701da62c454eb48eb430970b11abf9" Name="Diagram1">
+        <EntityTypeShape EntityType="PeretzRentsModel.CarFleet" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PeretzRentsModel.CarsModel" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PeretzRentsModel.Manufacture" Width="1.5" PointX="1.5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PeretzRentsModel.Rental" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PeretzRentsModel.Role" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PeretzRentsModel.User" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="PeretzRentsModel.FK_CarFleet_CarsModels" ManuallyRouted="false" />
+        <AssociationConnector Association="PeretzRentsModel.FK_Rentals_CarFleet" ManuallyRouted="false" />
+        <AssociationConnector Association="PeretzRentsModel.FK_CarsModels_Manufactures" ManuallyRouted="false" />
+        <AssociationConnector Association="PeretzRentsModel.FK_Rentals_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="PeretzRentsModel.UserVsRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

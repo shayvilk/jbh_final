@@ -1,0 +1,41 @@
+﻿<table border="1" align="center">
+
+    <tr>
+        <th>
+            Car Model
+        </th>
+        <th>
+            Mileage
+        </th>
+        <th>
+            Manufacturer Name
+        </th>
+        <th>
+            Transmission
+        </th>
+        <!--<th>
+            Car Photo
+        </th>-->
+    </tr>
+
+    <tr ng-repeat="item in carList">
+        <td>
+            {{item.CarModel}}
+        </td>
+        <td>
+            {{item.Mileage}}
+        </td>
+        <td>
+            {{item.ManufacturerName}}
+        </td>
+        <td>
+            {{item.Transmission}}
+        </td>
+        <!--<td>
+            <img ng-src="images/{{item.Photo}}.jpg" width="100" height="100" />
+        </td>-->
+    </tr>
+
+</table>
+
+

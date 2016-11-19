@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html ng-app="appModule">
+<head>
+    <!-- Running the appModule: -->
+    <title></title>
+    <meta charset="utf-8" />
+
+    <!-- CSS: -->
+    <link href="CSS/site.css" rel="stylesheet" />
+
+    <!-- All the needed scripts: -->
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/appModule.js"></script>
+    <script src="Scripts/homeModule.js"></script>
+    <script src="Scripts/manufacturesModule.js"></script>
+    <script src="Scripts/testModule.js"></script>
+    <script src="Scripts/usersModule.js"></script>
+    <script src="Scripts/carOrdersModule.js"></script>
+    <script src="Scripts/carFleetModule.js"></script>
+    <!--<script src="Scripts/productsModule.js"></script>
+    <script src="Scripts/suppliersModule.js"></script>-->
+
+
+</head>
+<body>
+    <a href="#/home">Home</a> | <a href="#/newUserPage">newUserPage</a> | <a href="#/carOrdersStatusPage">carOrdersStatusPage</a> | <a href="#/suppliers">Suppliers1</a> | <a href="#/carFleetManagmentPage">carFleetManagment</a>
+    <!-- The view part of the current page: -->
+    <div ng-view></div>
+
+</body>
+</html>
