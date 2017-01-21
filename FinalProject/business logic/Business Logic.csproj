@@ -56,6 +56,7 @@
     <Compile Include="Manufacturer.cs" />
     <Compile Include="Car.cs" />
     <Compile Include="CarsLogic.cs" />
+    <Compile Include="RentalOrder.cs" />
     <Compile Include="RentalsLogic.cs" />
     <Compile Include="UsersLogic.cs" />
     <Compile Include="RolesLogic.cs" />

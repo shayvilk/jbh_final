@@ -16,8 +16,8 @@ namespace Business_Logic
         public bool IsDeleted { get; set; }
         public Decimal DailyRate { get; set; }
         public Decimal LateFee { get; set; }
-        public int ManufactureYear { get; set; }
-
+        public int ManufactureYear { get; set; }    
+        
 
 
     }

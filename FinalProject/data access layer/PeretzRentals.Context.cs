@@ -378,5 +378,15 @@ namespace Data_Access_Layer
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SelectAllCarsIsNotDeleted_Result>("SelectAllCarsIsNotDeleted");
         }
+    
+        public virtual ObjectResult<GetAllRentals_Result> GetAllRentals()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetAllRentals_Result>("GetAllRentals");
+        }
+    
+        public virtual ObjectResult<SelectAllManufacturers_Result> SelectAllManufacturers()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SelectAllManufacturers_Result>("SelectAllManufacturers");
+        }
     }
 }

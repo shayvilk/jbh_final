@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Data_Access_Layer;
 using System.Net;
 
+
 namespace Business_Logic
 {
     /// <summary>
@@ -13,11 +14,42 @@ namespace Business_Logic
     /// </summary>
     public class RentalsLogic : BaseLogic
     {
-        public List<Rental> GetAllRentals()
+        //public List<Rental> GetAllRentals()
+        //{
+        //        var thisList = DB.Rentals.Where(r => r.CarRentalID > 0).ToList();
+        //    return thisList;
+        //}
+        public List<RentalOrder> GetAllRentals()
         {
-                var thisList = DB.Rentals.Where(r => r.CarRentalID > 0).ToList();
-            return thisList;
+            try
+            {
+                var query = DB.GetAllRentals();
+                List<RentalOrder> rentalList = null;
+
+                foreach (var item in query)
+                {
+                    RentalOrder rentalOrder = new RentalOrder();
+                    rentalOrder.CarRentalID = item.CarRentalID;
+                    rentalOrder.CarID = item.CarID   ;
+                    rentalOrder.UserID = item.UserID;
+                    rentalOrder.RentalStartDate = item.RentalStartDate;
+                    rentalOrder.RentalFinishDate = item.RentalFinishDate;
+                    rentalOrder.RentalActualFinishDate = item.RentalActualFinishDate;
+                    
+                    
+                    rentalList.Add(rentalOrder);
+                }
+                return rentalList;
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
+
 
         //        public void AddRental(string CarID, int userID, DateTime rentalStartDate, DateTime rentalFinishDate, DateTime rentalActualDate)
 
@@ -69,7 +101,10 @@ namespace Business_Logic
             return carList;
         }
 
-
+        public void AddRental(string carID, int userID, DateTime rentalStartDate, DateTime rentalFinishDate, DateTime? rentalActualFinishDate)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

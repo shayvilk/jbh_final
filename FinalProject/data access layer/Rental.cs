@@ -19,7 +19,7 @@ namespace Data_Access_Layer
         public int UserID { get; set; }
         public System.DateTime RentalStartDate { get; set; }
         public System.DateTime RentalFinishDate { get; set; }
-        public System.DateTime RentalActualFinishDate { get; set; }
+        public Nullable<System.DateTime> RentalActualFinishDate { get; set; }
     
         public virtual CarFleet CarFleet { get; set; }
         public virtual User User { get; set; }

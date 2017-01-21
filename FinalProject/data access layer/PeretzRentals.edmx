@@ -189,8 +189,10 @@
         <Function Name="DeleteManufacturer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="manufcaturerID" Type="int" Mode="In" />
         </Function>
+        <Function Name="GetAllRentals" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SelectAllCars" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SelectAllCarsIsNotDeleted" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SelectAllManufacturers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="UpdateCarFeelt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="carID" Type="nvarchar" Mode="In" />
           <Parameter Name="carModelID" Type="int" Mode="In" />
@@ -509,6 +511,8 @@
           </FunctionImport>
           <FunctionImport Name="SelectAllCars" ReturnType="Collection(PeretzRentsModel.SelectAllCars_Result)" />
           <FunctionImport Name="SelectAllCarsIsNotDeleted" ReturnType="Collection(PeretzRentsModel.SelectAllCarsIsNotDeleted_Result)" />
+          <FunctionImport Name="GetAllRentals" ReturnType="Collection(PeretzRentsModel.GetAllRentals_Result)" />
+          <FunctionImport Name="SelectAllManufacturers" ReturnType="Collection(PeretzRentsModel.SelectAllManufacturers_Result)" />
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -542,6 +546,19 @@
           <Property Type="String" Name="ManufacturerName" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="CarModel" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Transmission" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="GetAllRentals_Result">
+          <Property Type="Int32" Name="CarRentalID" Nullable="false" />
+          <Property Type="String" Name="CarID" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="UserID" Nullable="false" />
+          <Property Type="DateTime" Name="RentalStartDate" Nullable="false" />
+          <Property Type="DateTime" Name="RentalFinishDate" Nullable="false" />
+          <Property Type="DateTime" Name="RentalActualFinishDate" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SelectAllManufacturers_Result">
+          <Property Type="Int32" Name="ManufacturerID" Nullable="false" />
+          <Property Type="String" Name="ManufacturerName" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="IsDelete" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -670,6 +687,27 @@
                 <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
                 <ScalarProperty Name="CarModel" ColumnName="CarModel" />
                 <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetAllRentals" FunctionName="PeretzRentsModel.Store.GetAllRentals">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PeretzRentsModel.GetAllRentals_Result">
+                <ScalarProperty Name="CarRentalID" ColumnName="CarRentalID" />
+                <ScalarProperty Name="CarID" ColumnName="CarID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="RentalStartDate" ColumnName="RentalStartDate" />
+                <ScalarProperty Name="RentalFinishDate" ColumnName="RentalFinishDate" />
+                <ScalarProperty Name="RentalActualFinishDate" ColumnName="RentalActualFinishDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SelectAllManufacturers" FunctionName="PeretzRentsModel.Store.SelectAllManufacturers">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PeretzRentsModel.SelectAllManufacturers_Result">
+                <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+                <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

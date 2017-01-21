@@ -1,0 +1,9 @@
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\bin\Release\Data Access Layer.dll.config
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\bin\Release\Data Access Layer.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\bin\Release\Data Access Layer.pdb
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\bin\Release\EntityFramework.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\bin\Release\EntityFramework.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\obj\Release\Data Access Layer.dll
+C:\Users\assaf.peretz\Source\Repos\finalprogect\FinalProject\Data Access Layer\obj\Release\Data Access Layer.pdb

@@ -11,7 +11,7 @@ namespace MVC_And_Angular.ApiControllers
     {
         PeretzRentsEntities DB = new PeretzRentsEntities();
         [HttpPost]
-        public HttpResponseMessage PostOrder(Rental order)
+        public HttpResponseMessage PostOrder(RentalOrder order)
         {
             try
             {
@@ -34,10 +34,33 @@ namespace MVC_And_Angular.ApiControllers
             }
             return Ok(order);
         }
-        public IHttpActionResult GetOrders()
+        //public IHttpActionResult GetOrders()
+        //{
+        //    RentalsLogic rentalLogic = new RentalsLogic();
+        //    return Ok(rentalLogic.GetAllRentals());
+        //}
+        //public IHttpActionResult GetAllRentals()
+        //{
+        //    //if (Car == null)
+        //    //{
+        //    //    return NotFound();
+        //    //}
+        //    RentalsLogic rentalsLogic = new RentalsLogic();
+        //    return Ok(rentalsLogic.GetAllRentals());
+        //}
+        [HttpGet]
+        public IHttpActionResult GetCB_GetAllRentals()
         {
-            RentalsLogic rentalLogic = new RentalsLogic();
-            return Ok(rentalLogic.GetAllRentals());
+            try
+            {
+                RentalsLogic rentalLogic = new RentalsLogic();
+                return Ok(rentalLogic.GetAllRentals());
+            }
+            catch (Exception ex)
+            {
+                return NotFound();
+            }
         }
+
     }
 }

@@ -23,7 +23,7 @@
                 }
             };
 
-            $http.post("/api/CarOrdersApi", data, headers)
+            $http.post("/api/CarOrdersApi/", data, headers)
 
             .success(function (response) {
                 alert("Product has been successfully added.");
@@ -38,23 +38,24 @@
 
         };
 
-        $scope.GetCarOrders = function () {
-               
+        $scope.GetAllRentals = function () {
+            alert("Start");
             // State that the data is in JSON format:
             var headers = {
                 headers: {
                     "Content-Type": "application/json"
                 }
             };
-
-            $http.get("/api/CarOrderApi", headers)
-
+            alert("Start2");
+            $http.get("/api/CarOrdersApi/GetCB_GetAllRentals",  headers)
+                 //.success(function (response) { $scope.carOrders = response.data; })
             .success(function (response) {
                 alert("Product has been successfully added.");
                 $scope.carOrders = response;
+            alert("Start3");
             })
-
-            .error(function (response) {
+            .error
+                error(function (response) {
                 alert("Error:\n" +
                     "Message: " + response.Message + "\n" +
                     "Message Detail: " + response.MessageDetail);

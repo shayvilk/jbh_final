@@ -18,5 +18,6 @@ namespace Data_Access_Layer
         public string ManufacturerName { get; set; }
         public string CarModel { get; set; }
         public string Transmission { get; set; }
+        public bool ReadyForRental { get; set; }
     }
 }

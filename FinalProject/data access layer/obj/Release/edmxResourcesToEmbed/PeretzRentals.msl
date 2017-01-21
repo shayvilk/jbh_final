@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PeretzRentsModelStoreContainer" CdmEntityContainer="PeretzRentsEntities">
+    <EntitySetMapping Name="CarFleets">
+      <EntityTypeMapping TypeName="PeretzRentsModel.CarFleet">
+        <MappingFragment StoreEntitySet="CarFleet">
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CarID" ColumnName="CarID" />
+          <ScalarProperty Name="CarModelID" ColumnName="CarModelID" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="ReadyForRental" ColumnName="ReadyForRental" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarsModels">
+      <EntityTypeMapping TypeName="PeretzRentsModel.CarsModel">
+        <MappingFragment StoreEntitySet="CarsModels">
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CarModelID" ColumnName="CarModelID" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="CarModel" ColumnName="CarModel" />
+          <ScalarProperty Name="ManufactureYear" ColumnName="ManufactureYear" />
+          <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+          <ScalarProperty Name="DailyRate" ColumnName="DailyRate" />
+          <ScalarProperty Name="LateFee" ColumnName="LateFee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufactures">
+      <EntityTypeMapping TypeName="PeretzRentsModel.Manufacture">
+        <MappingFragment StoreEntitySet="Manufactures">
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rentals">
+      <EntityTypeMapping TypeName="PeretzRentsModel.Rental">
+        <MappingFragment StoreEntitySet="Rentals">
+          <ScalarProperty Name="CarRentalID" ColumnName="CarRentalID" />
+          <ScalarProperty Name="CarID" ColumnName="CarID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RentalStartDate" ColumnName="RentalStartDate" />
+          <ScalarProperty Name="RentalFinishDate" ColumnName="RentalFinishDate" />
+          <ScalarProperty Name="RentalActualFinishDate" ColumnName="RentalActualFinishDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="PeretzRentsModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="PeretzRentsModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UserVsRoles" TypeName="PeretzRentsModel.UserVsRoles" StoreEntitySet="UserVsRoles">
+      <EndProperty Name="Roles">
+        <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+      </EndProperty>
+      <EndProperty Name="Users">
+        <ScalarProperty Name="UserID" ColumnName="UserID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="AddCarModel" FunctionName="PeretzRentsModel.Store.AddCarModel" />
+    <FunctionImportMapping FunctionImportName="AddCarToCarFleet" FunctionName="PeretzRentsModel.Store.AddCarToCarFleet" />
+    <FunctionImportMapping FunctionImportName="AddManufacturer" FunctionName="PeretzRentsModel.Store.AddManufacturer" />
+    <FunctionImportMapping FunctionImportName="AddRental" FunctionName="PeretzRentsModel.Store.AddRental" />
+    <FunctionImportMapping FunctionImportName="UpdateCarFeelt" FunctionName="PeretzRentsModel.Store.UpdateCarFeelt" />
+    <FunctionImportMapping FunctionImportName="UpdateCarModel" FunctionName="PeretzRentsModel.Store.UpdateCarModel" />
+    <FunctionImportMapping FunctionImportName="UpdateManufacturer" FunctionName="PeretzRentsModel.Store.UpdateManufacturer" />
+    <FunctionImportMapping FunctionImportName="UpdateRentals" FunctionName="PeretzRentsModel.Store.UpdateRentals" />
+    <FunctionImportMapping FunctionImportName="CheckAvailability" FunctionName="PeretzRentsModel.Store.CheckAvailability">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PeretzRentsModel.CheckAvailability_Result">
+          <ScalarProperty Name="CarID" ColumnName="CarID" />
+          <ScalarProperty Name="CarModelID" ColumnName="CarModelID" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="ReadyForRental" ColumnName="ReadyForRental" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DeleteCarFormFleet" FunctionName="PeretzRentsModel.Store.DeleteCarFormFleet" />
+    <FunctionImportMapping FunctionImportName="DeleteCarModel" FunctionName="PeretzRentsModel.Store.DeleteCarModel" />
+    <FunctionImportMapping FunctionImportName="DeleteManufacturer" FunctionName="PeretzRentsModel.Store.DeleteManufacturer" />
+    <FunctionImportMapping FunctionImportName="SelectAllCars" FunctionName="PeretzRentsModel.Store.SelectAllCars">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PeretzRentsModel.SelectAllCars_Result">
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+          <ScalarProperty Name="CarModel" ColumnName="CarModel" />
+          <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectAllCarsIsNotDeleted" FunctionName="PeretzRentsModel.Store.SelectAllCarsIsNotDeleted">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PeretzRentsModel.SelectAllCarsIsNotDeleted_Result">
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+          <ScalarProperty Name="CarModel" ColumnName="CarModel" />
+          <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllRentals" FunctionName="PeretzRentsModel.Store.GetAllRentals">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PeretzRentsModel.GetAllRentals_Result">
+          <ScalarProperty Name="CarRentalID" ColumnName="CarRentalID" />
+          <ScalarProperty Name="CarID" ColumnName="CarID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RentalStartDate" ColumnName="RentalStartDate" />
+          <ScalarProperty Name="RentalFinishDate" ColumnName="RentalFinishDate" />
+          <ScalarProperty Name="RentalActualFinishDate" ColumnName="RentalActualFinishDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
