@@ -67,6 +67,9 @@
     <Compile Include="GetAllUserOrders_Result.cs">
       <DependentUpon>PeretzRentals.tt</DependentUpon>
     </Compile>
+    <Compile Include="GetRentalsByUser_Result.cs">
+      <DependentUpon>PeretzRentals.tt</DependentUpon>
+    </Compile>
     <Compile Include="Manufacture.cs">
       <DependentUpon>PeretzRentals.tt</DependentUpon>
     </Compile>

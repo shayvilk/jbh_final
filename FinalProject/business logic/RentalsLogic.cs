@@ -47,11 +47,51 @@ namespace Business_Logic
                 throw;
             }
         }
+        public List<RentalOrder> GetRentalsByUser(int userID)
+        {
+            try
+            {
+                var query = DB.GetRentalsByUser(userID);
+                List<RentalOrder> rentalList = null;
+
+                foreach (var item in query)
+                {
+                    RentalOrder rentalOrder = new RentalOrder();
+                    rentalOrder.CarRentalID = item.CarRentalID;
+                    rentalOrder.CarID = item.CarID;
+                    rentalOrder.UserID = item.UserID;
+                    rentalOrder.RentalStartDate = item.RentalStartDate;
+                    rentalOrder.RentalFinishDate = item.RentalFinishDate;
+                    rentalOrder.RentalActualFinishDate = item.RentalActualFinishDate;
+                    rentalOrder.IsCancelled = item.IsCancelled;
+                    rentalList.Add(rentalOrder);
+                }
+                return rentalList;
 
 
-        //        public void AddRental(string CarID, int userID, DateTime rentalStartDate, DateTime rentalFinishDate, DateTime rentalActualDate)
+            }
+            catch (Exception)
+            {
 
-        public void AddRental(string carID, int userID, DateTime rentalStartDate, DateTime rentalFinishDate, DateTime rentalActualDate)
+                throw;
+            }
+        }
+        public bool CancelOrder(int carRentalID)
+        {
+            var query = DB.Rentals.Where(s => s.CarRentalID == carRentalID).FirstOrDefault();
+
+            if (query != null)
+            {
+                query.IsCancelled = true;
+
+                DB.SaveChanges();
+
+                return true;
+            }
+            return false;
+        }
+
+        public void AddRental(string carID, int userID, DateTime rentalStartDate, DateTime rentalFinishDate, DateTime? rentalActualDate)
         {
             try
             {
@@ -63,12 +103,12 @@ namespace Business_Logic
                 throw;
             }
 
-            //TODO - waiting for stored procedure from Assaf.
+        
         }
 
-        public void UpdateRental(int CarRentalID, string CarID, int userID, DateTime rentalStartDate, DateTime rentalFinishDate, DateTime rentalActualDate)
+        public void UpdateRental(int CarRentalID, string CarID, int userID, DateTime rentalStartDate, DateTime rentalFinishDate, DateTime? rentalActualDate)
         {
-            //TODO - waiting for stored procedure from Assaf.
+  
             try
             {
                 DB.UpdateRentals(CarRentalID, CarID, userID, rentalStartDate, rentalFinishDate, rentalActualDate);
@@ -99,10 +139,6 @@ namespace Business_Logic
             return carList;
         }
 
-        public void AddRental(string carID, int userID, DateTime rentalStartDate, DateTime rentalFinishDate, DateTime? rentalActualFinishDate)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
 

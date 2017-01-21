@@ -174,5 +174,18 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetRentalsByUser" FunctionName="PeretzRentsModel.Store.GetRentalsByUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PeretzRentsModel.GetRentalsByUser_Result">
+          <ScalarProperty Name="CarRentalID" ColumnName="CarRentalID" />
+          <ScalarProperty Name="CarID" ColumnName="CarID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RentalStartDate" ColumnName="RentalStartDate" />
+          <ScalarProperty Name="RentalFinishDate" ColumnName="RentalFinishDate" />
+          <ScalarProperty Name="RentalActualFinishDate" ColumnName="RentalActualFinishDate" />
+          <ScalarProperty Name="IsCancelled" ColumnName="IsCancelled" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

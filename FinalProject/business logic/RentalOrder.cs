@@ -14,7 +14,7 @@ namespace Business_Logic
         public DateTime RentalStartDate { get; set; }
         public DateTime RentalFinishDate { get; set; }
         public DateTime? RentalActualFinishDate { get; set; }
-        public bool IsCancelled { get; set; }
+        public Nullable<bool> IsCancelled { get; set; }
 
 
     }

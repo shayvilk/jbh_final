@@ -402,5 +402,14 @@ namespace Data_Access_Layer
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetAllUserOrders_Result>("GetAllUserOrders", userIDParameter);
         }
+    
+        public virtual ObjectResult<GetRentalsByUser_Result> GetRentalsByUser(Nullable<int> userID)
+        {
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetRentalsByUser_Result>("GetRentalsByUser", userIDParameter);
+        }
     }
 }

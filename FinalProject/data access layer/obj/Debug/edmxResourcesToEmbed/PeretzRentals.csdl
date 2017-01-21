@@ -260,6 +260,9 @@
     <FunctionImport Name="GetAllUserOrders" ReturnType="Collection(PeretzRentsModel.GetAllUserOrders_Result)">
       <Parameter Name="UserID" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="GetRentalsByUser" ReturnType="Collection(PeretzRentsModel.GetRentalsByUser_Result)">
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -318,6 +321,15 @@
     <Property Type="Boolean" Name="IsDelete" Nullable="false" />
   </ComplexType>
   <ComplexType Name="GetAllUserOrders_Result">
+    <Property Type="Int32" Name="CarRentalID" Nullable="false" />
+    <Property Type="String" Name="CarID" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="DateTime" Name="RentalStartDate" Nullable="false" />
+    <Property Type="DateTime" Name="RentalFinishDate" Nullable="false" />
+    <Property Type="DateTime" Name="RentalActualFinishDate" Nullable="true" />
+    <Property Type="Boolean" Name="IsCancelled" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetRentalsByUser_Result">
     <Property Type="Int32" Name="CarRentalID" Nullable="false" />
     <Property Type="String" Name="CarID" Nullable="false" MaxLength="50" />
     <Property Type="Int32" Name="UserID" Nullable="false" />

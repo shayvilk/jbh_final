@@ -194,6 +194,9 @@
         <Function Name="GetAllUserOrders" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="UserID" Type="int" Mode="In" />
         </Function>
+        <Function Name="GetRentalsByUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserID" Type="int" Mode="In" />
+        </Function>
         <Function Name="SelectAllCarModels" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SelectAllCars" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SelectAllCarsIsNotDeleted" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
@@ -521,6 +524,9 @@
           <FunctionImport Name="SelectAllManufacturers" ReturnType="Collection(PeretzRentsModel.SelectAllManufacturers_Result)" />
           <FunctionImport Name="SelectAllCarModels" ReturnType="Collection(PeretzRentsModel.SelectAllCarModels_Result)" />
           <FunctionImport Name="GetAllUserOrders" ReturnType="Collection(PeretzRentsModel.GetAllUserOrders_Result)">
+          <Parameter Name="UserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetRentalsByUser" ReturnType="Collection(PeretzRentsModel.GetRentalsByUser_Result)">
             <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
@@ -581,6 +587,15 @@
           <Property Type="Boolean" Name="IsDelete" Nullable="false" />
         </ComplexType>
         <ComplexType Name="GetAllUserOrders_Result">
+          <Property Type="Int32" Name="CarRentalID" Nullable="false" />
+          <Property Type="String" Name="CarID" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="UserID" Nullable="false" />
+          <Property Type="DateTime" Name="RentalStartDate" Nullable="false" />
+          <Property Type="DateTime" Name="RentalFinishDate" Nullable="false" />
+          <Property Type="DateTime" Name="RentalActualFinishDate" Nullable="true" />
+          <Property Type="Boolean" Name="IsCancelled" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetRentalsByUser_Result">
           <Property Type="Int32" Name="CarRentalID" Nullable="false" />
           <Property Type="String" Name="CarID" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="UserID" Nullable="false" />
@@ -758,6 +773,19 @@
           <FunctionImportMapping FunctionImportName="GetAllUserOrders" FunctionName="PeretzRentsModel.Store.GetAllUserOrders">
             <ResultMapping>
               <ComplexTypeMapping TypeName="PeretzRentsModel.GetAllUserOrders_Result">
+                <ScalarProperty Name="CarRentalID" ColumnName="CarRentalID" />
+                <ScalarProperty Name="CarID" ColumnName="CarID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="RentalStartDate" ColumnName="RentalStartDate" />
+                <ScalarProperty Name="RentalFinishDate" ColumnName="RentalFinishDate" />
+                <ScalarProperty Name="RentalActualFinishDate" ColumnName="RentalActualFinishDate" />
+                <ScalarProperty Name="IsCancelled" ColumnName="IsCancelled" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetRentalsByUser" FunctionName="PeretzRentsModel.Store.GetRentalsByUser">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PeretzRentsModel.GetRentalsByUser_Result">
                 <ScalarProperty Name="CarRentalID" ColumnName="CarRentalID" />
                 <ScalarProperty Name="CarID" ColumnName="CarID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
