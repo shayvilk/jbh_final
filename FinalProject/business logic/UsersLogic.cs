@@ -17,14 +17,28 @@ namespace Business_Logic
         /// <summary>
         /// Register new user.
         /// </summary>
-        /// <param name="username">The user's username.</param>
-        /// <param name="password">The user's password.</param>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <param name="idNumber"></param>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <param name="email"></param>
+        /// <param name="birthDate"></param>
                 //public void Register(string username, string password, string firstName,, string lastName, string id, string email, DateTime dateOfBirth, string phone, string mobile)
-        public void Register(User user)
+        public void Register(string firstName, string lastName, string id,string username, string password, string email, DateTime birthDate)
         {
             string encryptPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(user.Password, "sha1");
             //User user = new User { Username = username, Password = encryptPassword, FirstName = firstName, LastName = lastName, ID = id, EMail = email, DateOfBirth = dateOfBirth, Phone = phone, Mobile = mobile };
-            DB.Roles.FirstOrDefault(r => r.RoleID == 3).Users.Add(user); // Set this user the "User" Role (RoleID = 3).
+            User user = new User {
+                FirstName = firstName,
+                LastName = lastName,
+                ID = id,
+                RoleID = 3,// default role
+                Username = username,
+                Password = encryptPassword,
+                EMail = email,
+                DateOfBirth = birthDate
+            };
             DB.Users.Add(user);
             DB.SaveChanges();
         }

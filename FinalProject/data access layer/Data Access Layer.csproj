@@ -73,6 +73,9 @@
     <Compile Include="Manufacture.cs">
       <DependentUpon>PeretzRentals.tt</DependentUpon>
     </Compile>
+    <Compile Include="Partials\Car.cs" />
+    <Compile Include="Partials\CarModels.cs" />
+    <Compile Include="Partials\Order.cs" />
     <Compile Include="PeretzRentals.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -107,10 +110,19 @@
     <Compile Include="SelectAllManufacturers_Result.cs">
       <DependentUpon>PeretzRentals.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_helpdiagramdefinition1_Result.cs">
+      <DependentUpon>PeretzRentals.tt</DependentUpon>
+    </Compile>
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>PeretzRentals.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_helpdiagrams1_Result.cs">
+      <DependentUpon>PeretzRentals.tt</DependentUpon>
+    </Compile>
     <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>PeretzRentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
       <DependentUpon>PeretzRentals.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
@@ -147,9 +159,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Partials\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

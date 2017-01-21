@@ -31,10 +31,12 @@ namespace Data_Access_Layer
         public Nullable<System.DateTime> DateOfBirth { get; set; }
         public string Phone { get; set; }
         public string Mobile { get; set; }
+        public int RoleID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rental> Rentals { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Role> Roles { get; set; }
+        public virtual Role Role { get; set; }
     }
 }

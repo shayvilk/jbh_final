@@ -16,6 +16,8 @@
         <AssociationConnector Association="PeretzRentsModel.FK_CarsModels_Manufactures" ManuallyRouted="false" />
         <AssociationConnector Association="PeretzRentsModel.FK_Rentals_Users" ManuallyRouted="false" />
         <AssociationConnector Association="PeretzRentsModel.UserVsRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PeretzRentsModel.sysdiagram" Width="1.5" PointX="5.375" PointY="5.75" />
+        <AssociationConnector Association="PeretzRentsModel.FK_Users_Roles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
