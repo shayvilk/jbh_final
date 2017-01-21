@@ -255,6 +255,7 @@
     <FunctionImport Name="SelectAllCarsIsNotDeleted" ReturnType="Collection(PeretzRentsModel.SelectAllCarsIsNotDeleted_Result)" />
     <FunctionImport Name="GetAllRentals" ReturnType="Collection(PeretzRentsModel.GetAllRentals_Result)" />
     <FunctionImport Name="SelectAllManufacturers" ReturnType="Collection(PeretzRentsModel.SelectAllManufacturers_Result)" />
+    <FunctionImport Name="SelectAllCarModels" ReturnType="Collection(PeretzRentsModel.SelectAllCarModels_Result)" />
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -301,5 +302,15 @@
     <Property Type="Int32" Name="ManufacturerID" Nullable="false" />
     <Property Type="String" Name="ManufacturerName" Nullable="false" MaxLength="50" />
     <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SelectAllCarModels_Result">
+    <Property Type="Int32" Name="CarModelID" Nullable="false" />
+    <Property Type="String" Name="ManufacturerName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CarModel" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="ManufactureYear" Nullable="false" />
+    <Property Type="String" Name="Transmission" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="DailyRate" Nullable="false" Precision="19" />
+    <Property Type="Decimal" Name="LateFee" Nullable="false" Precision="19" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="false" />
   </ComplexType>
 </Schema>

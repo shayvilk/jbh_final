@@ -211,14 +211,38 @@ namespace Business_Logic
                 DB.SaveChanges();
             }
         }
+       
         #endregion
 
         #region CarModels
-        public int[] GetAllCarModels()
+        public List<Car> GetAllCarModels()
         {
             try
             {
-                return DB.CarsModels.Select(modle => modle.CarModelID).ToArray();
+                //TODO - remember to add a "where" IsDeleted = false, this will be used for "delete" cars.
+                //return DB.CarFleets.Select(car => car.CarID).ToArray();
+
+                var query = DB.SelectAllCarModels();
+
+                List<Car> carList = null;
+
+                foreach (var item in query)
+                {
+                    Car car = new Car();
+                    car.CarModelID = item.CarModelID;
+                    car.ManufacturerName = item.ManufacturerName;
+                    car.CarModel = item.CarModel;
+                    car.ManufactureYear = item.ManufactureYear;
+                    car.Transmission = item.Transmission;
+                    car.ManufacturerName = item.ManufacturerName;
+                    car.DailyRate = item.DailyRate;
+                    car.LateFee = item.LateFee;
+                    car.IsDeleted = item.IsDelete ;
+                    carList.Add(car);
+                }
+                return carList;
+
+
             }
             catch (Exception)
             {
@@ -227,16 +251,61 @@ namespace Business_Logic
             }
         }
 
-        public void AddCarModel(int manufacturerID,string carModel,int manufactureYear,string transmission,decimal dailyRate,decimal lateFee)
+        public bool AddCarModel(int manufacturerID,string carModel,int manufactureYear,string transmission,decimal dailyRate,decimal lateFee)
         {
-            DB.AddCarModel(manufacturerID, carModel, manufactureYear, transmission, dailyRate, lateFee);
+            var checkIfExist = DB.CarsModels.Where(c => (c.CarModel == carModel) && (c.ManufacturerID == manufacturerID) && (c.ManufactureYear == manufactureYear) && (c.Transmission == transmission) &&
+                                               (c.DailyRate == dailyRate) && (c.LateFee == lateFee)).FirstOrDefault();
+
+            if (checkIfExist == null)
+            {
+                DB.AddCarModel(manufacturerID, carModel, manufactureYear, transmission, dailyRate, lateFee);
+                return true;
+            }
+           
+            return false;
         }
 
-        public void UpdateCarModel(int carModelID, int manufacturerID, string carModel, int manufactureYear, string transmission, decimal dailyRate, decimal lateFee)
+        public bool UpdateCarModel(int carModelID, int manufacturerID, string carModel, int manufactureYear, string transmission, decimal dailyRate, decimal lateFee)
         {
-            DB.UpdateCarModel(carModelID,manufacturerID, carModel, manufactureYear, transmission, dailyRate, lateFee);
+            var checkIfExist = DB.CarsModels.Where(c => (c.CarModel == carModel) && (c.ManufacturerID == manufacturerID) && (c.ManufactureYear == manufactureYear) && (c.Transmission == transmission) &&
+                                               (c.DailyRate == dailyRate) && (c.LateFee == lateFee)).FirstOrDefault();
+
+            if (checkIfExist == null)
+            {
+                DB.UpdateCarModel(carModelID, manufacturerID, carModel, manufactureYear, transmission, dailyRate, lateFee);
+                return true;
+            }
+
+            return false;
         }
 
+        public void DeleteCarModel(int carModelID)
+        {
+            var carsModelsQuery = DB.CarsModels.Where(x => x.CarModelID == carModelID).FirstOrDefault();
+
+            if (carsModelsQuery != null)
+            {
+                carsModelsQuery.IsDelete = true;
+
+                var carQuery = DB.CarFleets.Where(p => p.CarModelID == carModelID).ToList();
+
+                if (carQuery != null)
+                {
+                    foreach (var item in carQuery)
+                    {
+                        if (item != null)
+                        {
+                            item.ReadyForRental = false;
+                            item.IsDelete = true;
+                        }
+                    }
+                }
+
+                DB.SaveChanges();
+            }
+
+
+        }
         #endregion
 
 

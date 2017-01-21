@@ -13,6 +13,8 @@ namespace Data_Access_Layer
     
     public partial class CheckAvailability_Result
     {
+        public readonly string ManufacturerName;
+
         public string CarID { get; set; }
         public int CarModelID { get; set; }
         public int Mileage { get; set; }
@@ -21,6 +23,5 @@ namespace Data_Access_Layer
         public bool IsDelete { get; set; }
         public string CarModel { get; set; }
         public string Transmission { get; set; }
-        public string ManufacturerName { get; set; }
     }
 }

@@ -388,5 +388,10 @@ namespace Data_Access_Layer
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SelectAllManufacturers_Result>("SelectAllManufacturers");
         }
+    
+        public virtual ObjectResult<SelectAllCarModels_Result> SelectAllCarModels()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SelectAllCarModels_Result>("SelectAllCarModels");
+        }
     }
 }

@@ -190,6 +190,7 @@
           <Parameter Name="manufcaturerID" Type="int" Mode="In" />
         </Function>
         <Function Name="GetAllRentals" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SelectAllCarModels" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SelectAllCars" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SelectAllCarsIsNotDeleted" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SelectAllManufacturers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
@@ -513,6 +514,7 @@
           <FunctionImport Name="SelectAllCarsIsNotDeleted" ReturnType="Collection(PeretzRentsModel.SelectAllCarsIsNotDeleted_Result)" />
           <FunctionImport Name="GetAllRentals" ReturnType="Collection(PeretzRentsModel.GetAllRentals_Result)" />
           <FunctionImport Name="SelectAllManufacturers" ReturnType="Collection(PeretzRentsModel.SelectAllManufacturers_Result)" />
+          <FunctionImport Name="SelectAllCarModels" ReturnType="Collection(PeretzRentsModel.SelectAllCarModels_Result)" />
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -559,6 +561,16 @@
           <Property Type="Int32" Name="ManufacturerID" Nullable="false" />
           <Property Type="String" Name="ManufacturerName" Nullable="false" MaxLength="50" />
           <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SelectAllCarModels_Result">
+          <Property Type="Int32" Name="CarModelID" Nullable="false" />
+          <Property Type="String" Name="ManufacturerName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CarModel" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="ManufactureYear" Nullable="false" />
+          <Property Type="String" Name="Transmission" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="DailyRate" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="LateFee" Nullable="false" Precision="19" />
+          <Property Type="Boolean" Name="IsDelete" Nullable="false" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -707,6 +719,20 @@
               <ComplexTypeMapping TypeName="PeretzRentsModel.SelectAllManufacturers_Result">
                 <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
                 <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SelectAllCarModels" FunctionName="PeretzRentsModel.Store.SelectAllCarModels">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PeretzRentsModel.SelectAllCarModels_Result">
+                <ScalarProperty Name="CarModelID" ColumnName="CarModelID" />
+                <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+                <ScalarProperty Name="CarModel" ColumnName="CarModel" />
+                <ScalarProperty Name="ManufactureYear" ColumnName="ManufactureYear" />
+                <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+                <ScalarProperty Name="DailyRate" ColumnName="DailyRate" />
+                <ScalarProperty Name="LateFee" ColumnName="LateFee" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
               </ComplexTypeMapping>
             </ResultMapping>

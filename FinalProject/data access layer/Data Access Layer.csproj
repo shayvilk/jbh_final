@@ -89,6 +89,9 @@
     <Compile Include="Role.cs">
       <DependentUpon>PeretzRentals.tt</DependentUpon>
     </Compile>
+    <Compile Include="SelectAllCarModels_Result.cs">
+      <DependentUpon>PeretzRentals.tt</DependentUpon>
+    </Compile>
     <Compile Include="SelectAllCarsIsNotDeleted_Result.cs">
       <DependentUpon>PeretzRentals.tt</DependentUpon>
     </Compile>
