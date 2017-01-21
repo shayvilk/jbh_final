@@ -39,6 +39,7 @@
     <EntitySetMapping Name="Rentals">
       <EntityTypeMapping TypeName="PeretzRentsModel.Rental">
         <MappingFragment StoreEntitySet="Rentals">
+          <ScalarProperty Name="IsCancelled" ColumnName="IsCancelled" />
           <ScalarProperty Name="CarRentalID" ColumnName="CarRentalID" />
           <ScalarProperty Name="CarID" ColumnName="CarID" />
           <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -157,6 +158,19 @@
           <ScalarProperty Name="DailyRate" ColumnName="DailyRate" />
           <ScalarProperty Name="LateFee" ColumnName="LateFee" />
           <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllUserOrders" FunctionName="PeretzRentsModel.Store.GetAllUserOrders">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PeretzRentsModel.GetAllUserOrders_Result">
+          <ScalarProperty Name="CarRentalID" ColumnName="CarRentalID" />
+          <ScalarProperty Name="CarID" ColumnName="CarID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RentalStartDate" ColumnName="RentalStartDate" />
+          <ScalarProperty Name="RentalFinishDate" ColumnName="RentalFinishDate" />
+          <ScalarProperty Name="RentalActualFinishDate" ColumnName="RentalActualFinishDate" />
+          <ScalarProperty Name="IsCancelled" ColumnName="IsCancelled" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>

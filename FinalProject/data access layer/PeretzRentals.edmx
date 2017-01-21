@@ -47,6 +47,7 @@
           <Property Name="RentalStartDate" Type="date" Nullable="false" />
           <Property Name="RentalFinishDate" Type="date" Nullable="false" />
           <Property Name="RentalActualFinishDate" Type="date" />
+          <Property Name="IsCancelled" Type="bit" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -190,6 +191,9 @@
           <Parameter Name="manufcaturerID" Type="int" Mode="In" />
         </Function>
         <Function Name="GetAllRentals" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetAllUserOrders" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserID" Type="int" Mode="In" />
+        </Function>
         <Function Name="SelectAllCarModels" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SelectAllCars" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SelectAllCarsIsNotDeleted" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
@@ -308,6 +312,7 @@
           <Property Name="RentalActualFinishDate" Type="DateTime" Precision="0" />
           <NavigationProperty Name="CarFleet" Relationship="Self.FK_Rentals_CarFleet" FromRole="Rentals" ToRole="CarFleet" />
           <NavigationProperty Name="User" Relationship="Self.FK_Rentals_Users" FromRole="Rentals" ToRole="Users" />
+          <Property Name="IsCancelled" Type="Boolean" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -515,6 +520,9 @@
           <FunctionImport Name="GetAllRentals" ReturnType="Collection(PeretzRentsModel.GetAllRentals_Result)" />
           <FunctionImport Name="SelectAllManufacturers" ReturnType="Collection(PeretzRentsModel.SelectAllManufacturers_Result)" />
           <FunctionImport Name="SelectAllCarModels" ReturnType="Collection(PeretzRentsModel.SelectAllCarModels_Result)" />
+          <FunctionImport Name="GetAllUserOrders" ReturnType="Collection(PeretzRentsModel.GetAllUserOrders_Result)">
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -572,6 +580,15 @@
           <Property Type="Decimal" Name="LateFee" Nullable="false" Precision="19" />
           <Property Type="Boolean" Name="IsDelete" Nullable="false" />
         </ComplexType>
+        <ComplexType Name="GetAllUserOrders_Result">
+          <Property Type="Int32" Name="CarRentalID" Nullable="false" />
+          <Property Type="String" Name="CarID" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="UserID" Nullable="false" />
+          <Property Type="DateTime" Name="RentalStartDate" Nullable="false" />
+          <Property Type="DateTime" Name="RentalFinishDate" Nullable="false" />
+          <Property Type="DateTime" Name="RentalActualFinishDate" Nullable="true" />
+          <Property Type="Boolean" Name="IsCancelled" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -616,6 +633,7 @@
           <EntitySetMapping Name="Rentals">
             <EntityTypeMapping TypeName="PeretzRentsModel.Rental">
               <MappingFragment StoreEntitySet="Rentals">
+                <ScalarProperty Name="IsCancelled" ColumnName="IsCancelled" />
                 <ScalarProperty Name="CarRentalID" ColumnName="CarRentalID" />
                 <ScalarProperty Name="CarID" ColumnName="CarID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -734,6 +752,19 @@
                 <ScalarProperty Name="DailyRate" ColumnName="DailyRate" />
                 <ScalarProperty Name="LateFee" ColumnName="LateFee" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetAllUserOrders" FunctionName="PeretzRentsModel.Store.GetAllUserOrders">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PeretzRentsModel.GetAllUserOrders_Result">
+                <ScalarProperty Name="CarRentalID" ColumnName="CarRentalID" />
+                <ScalarProperty Name="CarID" ColumnName="CarID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="RentalStartDate" ColumnName="RentalStartDate" />
+                <ScalarProperty Name="RentalFinishDate" ColumnName="RentalFinishDate" />
+                <ScalarProperty Name="RentalActualFinishDate" ColumnName="RentalActualFinishDate" />
+                <ScalarProperty Name="IsCancelled" ColumnName="IsCancelled" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

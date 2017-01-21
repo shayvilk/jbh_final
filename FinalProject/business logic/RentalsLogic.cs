@@ -35,8 +35,6 @@ namespace Business_Logic
                     rentalOrder.RentalStartDate = item.RentalStartDate;
                     rentalOrder.RentalFinishDate = item.RentalFinishDate;
                     rentalOrder.RentalActualFinishDate = item.RentalActualFinishDate;
-                    
-                    
                     rentalList.Add(rentalOrder);
                 }
                 return rentalList;
